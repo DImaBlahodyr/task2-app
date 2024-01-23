@@ -1,16 +1,23 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <raspberry-panel :raspberry-data-list="raspberryList" />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import RaspberryPanel from './components/RaspberryPanel.vue'
+import { raspberryList } from './constants/2_data_raspberry'
 
 export default {
   name: 'App',
+
   components: {
-    HelloWorld
-  }
+    RaspberryPanel,
+  },
+
+  data() {
+    return {
+      raspberryList,
+    }
+  },
 }
 </script>
 
